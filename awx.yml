@@ -1,0 +1,27 @@
+awx:
+  inventories:
+    - name: test-inv
+      description: test inventory-1
+      variables: "@default-inventory-vars-win.yml"
+      inventorySources:
+        - name: test-inv-source
+          description: test-inv-source1
+          source: scm
+          overwrite: true
+          overwriteVars: true
+          sourcePath: inventories/gcm-core.yml
+  
+  jobTemplates:
+    - name: winrm-test
+    description: gcm-core
+    jobType: run
+    playbook: playbooks/awx-winrm-connection-test.yml
+    credential: dummy
+    inventory: gcm-core-middleware-inventory
+  
+    - name: ssh-test
+    description: gcm-core
+    jobType: run
+    playbook: playbooks/awx-ssh-connection-test.yml
+    credential: dummy
+    inventory: gcm-core-middleware-inventory    
