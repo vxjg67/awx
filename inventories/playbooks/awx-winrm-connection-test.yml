@@ -1,2 +1,5 @@
-- name: Example from an Ansible Playbook
-  ansible.windows.win_ping:
+---
+- hosts: all
+  tasks:
+    - name: ping windows machine
+      win_ping:
