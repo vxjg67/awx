@@ -7,10 +7,10 @@ all:
   hosts:
     192.168.2.203:
 
-  jobTemplates:
-    - name: winrm-test
-    description: gcm-core
-    jobType: run
-    playbook: playbooks/awx-winrm-connection-test.yml
-    credential: dummy
-    inventory: gcm-core-middleware-inventory
+#  jobTemplates:
+#    - name: winrm-test
+#    description: gcm-core
+#    jobType: run
+#    playbook: playbooks/awx-winrm-connection-test.yml
+#    credential: dummy
+#    inventory: gcm-core-middleware-inventory
