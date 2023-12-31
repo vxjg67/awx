@@ -10,6 +10,15 @@ awx:
           overwrite: true
           overwriteVars: true
           sourcePath: inventories/gcm-core.yml
+    - name: test
+      description: test inv
+      inventorySources:
+        - name: test-inv-source2
+          description: test-inv-source2
+          source: scm
+          overwrite: true
+          overwriteVars: true
+          sourcePath: inventories/test.yml
   
 #  jobTemplates:
 #    - name: winrm-test
