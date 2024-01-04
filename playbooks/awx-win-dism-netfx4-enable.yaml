@@ -1,5 +1,7 @@
 ---
 - hosts: all
+  collections:
+    - community.windows
   tasks:
     - name: Enable dotNET4 via DISM
       ansible.windows.win_command:
