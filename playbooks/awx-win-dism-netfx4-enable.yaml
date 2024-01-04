@@ -1,1 +1,6 @@
-049304
+---
+- hosts: all
+  tasks:
+    - name: Enable dotNET4 via DISM
+      ansible.windows.win_command:
+        cmd: dism.exe /online /enable-feature /featureName:NetFx4 /all
