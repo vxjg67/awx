@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+    - name: Run the 'whoami' executable with the '/all' argument
+      ansible.windows.win_command:
+        cmd: whoami.exe /all
