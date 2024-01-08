@@ -1,5 +1,5 @@
 ---
 - hosts: all
   tasks:
-    - name: ping windows machine
-      ansible.windows.win_shell: get-child item -path C:\
+    - name: run powershell cmd
+      ansible.windows.win_shell: get-childitem -path C:\
