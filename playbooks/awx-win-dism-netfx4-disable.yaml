@@ -1,0 +1,8 @@
+---
+- hosts: all
+  collections:
+    - community.windows
+  tasks:
+    - name: Enable dotNET4 via DISM
+      ansible.windows.win_command:
+        cmd: dism.exe /online /disable-feature /featureName:NetFx4 /all
