@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+    - name: Enable dotNET4 via DISM
+      ansible.builtin.cmd:
+        cmd: dism.exe /online /get-features
