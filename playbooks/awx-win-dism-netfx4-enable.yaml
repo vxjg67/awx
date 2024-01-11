@@ -1,8 +1,6 @@
 ---
 - hosts: all
-  collections:
-    - community.windows
   tasks:
-    - name: Enable dotNET4 via DISM
+    - name: Enable dotNET4 via DISM - use Verbose 3
       ansible.windows.win_command:
-        cmd: dism.exe /online /enable-feature /featureName:NetFx4 /all
+        cmd: '"C:\Windows\system32\dism.exe" "/enable-feature" "/featureName:NetFx4" "/all"'
