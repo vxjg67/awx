@@ -3,4 +3,4 @@
   tasks:
     - name: Enable dotNET4 via DISM - use Verbose 3
       ansible.windows.win_command:
-        cmd: '"C:\Windows\system32\dism.exe" "/online" "/enable-feature" "/featureName:NetFx4" "/all"'
+        cmd: '"C:\Windows\system32\dism.exe" "/online" "/enable-feature" "/featureName:NetFx4"'
