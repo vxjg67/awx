@@ -1,6 +1,6 @@
 ---
 - hosts: all
   tasks:
-    - name: Enable dotNET4 via DISM - use Verbose 3
+    - name: Disable dotNET4 via DISM - use Verbose 3
       ansible.windows.win_command:
         cmd: '"C:\Windows\system32\dism.exe" "/disable-feature" "/featureName:NetFx4" "/all"'
