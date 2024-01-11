@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+    - name: Disable dotNET3 via DISM - use Verbose 3
+      ansible.windows.win_command:
+        cmd: '"C:\Windows\system32\dism.exe" "/online" "/disable-feature" "/featureName:NetFx3"'
+    - name: Reboot
+      ansible.builtin.reboot:
+        reboot_timeout: 5

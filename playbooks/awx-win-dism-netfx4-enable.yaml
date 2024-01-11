@@ -3,4 +3,7 @@
   tasks:
     - name: Enable dotNET4 via DISM - use Verbose 3
       ansible.windows.win_command:
-        cmd: '"C:\Windows\system32\dism.exe" "/online" "/enable-feature" "/featureName:NetFx4"'
+        cmd: '"C:\Windows\system32\dism.exe" "/online" "/enable-feature" "/all" "/featureName:NetFx4"'
+    - name: Reboot
+      ansible.builtin.reboot:
+        reboot_timeout: 5
