@@ -3,7 +3,6 @@
   tasks:
     - name: Disable dotNET3 via DISM - use Verbose 3
       ansible.windows.win_command:
-      become: yes
         cmd: '"C:\Windows\system32\dism.exe" "/online" "/disable-feature" "/featureName:NetFx3"'
     - name: Reboot a machine that takes time to settle after being booted
       ansible.windows.win_reboot:
