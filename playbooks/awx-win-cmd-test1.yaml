@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+    - name: CMD whoami - builtin.cmd
+      ansible.builtin.cmd:
+        cmd: whoami.exe
