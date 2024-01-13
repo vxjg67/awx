@@ -3,8 +3,8 @@
     hosts: all
     tasks:
       - name: Execute the dir command
+        ansible.windows.win_command: dir
         register: dirout
-        ansible.windows.win_command:
-          cmd: dir
+        
       - debug:
           var: dirout.stdout_lines
