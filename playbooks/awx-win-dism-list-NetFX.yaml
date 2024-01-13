@@ -3,6 +3,7 @@
   tasks:
     - name: Run DISM via cmd - Check features installed - use Verbose 3
       ansible.windows.win_command:
+      register: dism_features  
         argv:
         - cmd.exe
         - /c
@@ -10,6 +11,5 @@
         - /online
         - /get-features
         - /format:table
-        register: dism_features
     - debug:
         msg: "{{ dism_features.stdout_lines|list }}"
