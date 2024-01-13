@@ -2,9 +2,9 @@
   - name: running command in Windows
     hosts: all
     tasks:
-      - name: Execute the df command
+      - name: Execute the dir command
         register: dirout
-        command: "dir"
-
+        ansible.windows.win_command:
+          cmd: dir
       - debug:
           var: dirout.stdout_lines
