@@ -9,4 +9,7 @@
         - dism.exe
         - /online
         - /get-features
-        - /format:table        
+        - /format:table
+        register: dism_features
+    - debug:
+        msg: "{{ dism_features.stdout_lines|list }}"
