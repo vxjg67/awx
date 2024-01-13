@@ -12,4 +12,4 @@
         - /get-features
         - /format:table
     - debug:
-        msg: "{{ dism_features.stdout_lines|list }}"
+        msg: "{{ dism_features.stdout_lines|list|grep NetFx }}"
