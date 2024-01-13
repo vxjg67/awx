@@ -3,4 +3,8 @@
   tasks:
     - name: Run DISM via cmd - Check features installed - use Verbose 3
       ansible.windows.win_command:
-        cmd: 'dism.exe /online /get-features /format:table | findstr NetFx'
+        argv:
+        - dism.exe
+        - /online
+        - /get-features
+        - /format:table
