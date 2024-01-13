@@ -10,5 +10,5 @@
         - /online
         - /get-features
         - /format:table
-        - | findstr NetFx
+        - "| findstr NetFx"
         
