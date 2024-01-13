@@ -1,0 +1,10 @@
+---
+  - name: running command in Windows
+    hosts: all
+    tasks:
+      - name: Execute the df command
+        register: dirout
+        command: "dir"
+
+      - debug:
+          var: dirout.stdout_lines
