@@ -9,6 +9,4 @@
         - dism.exe
         - /online
         - /get-features
-        - /format:table
-        - "| findstr NetFx"
-        
+        - /format:table        
