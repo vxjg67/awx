@@ -2,8 +2,8 @@
 - hosts: all
   tasks:
     - name: Run DISM via cmd - Check features installed - use Verbose 3
+      register: dism_features
       ansible.windows.win_command:
-      register: dism_features  
         argv:
         - cmd.exe
         - /c
