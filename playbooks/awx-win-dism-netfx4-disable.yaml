@@ -4,7 +4,7 @@
   tasks:
     - name: Disable dotNET4 via DISM
       ansible.windows.win_command:
-        cmd: '"C:\Windows\system32\dism.exe" "/online" "/disable-feature" "/featureName:NetFx4"'
+        cmd: '"C:\Windows\system32\dism.exe" "/online" "/disable-feature" "/featureName:NetFx4" "/quiet"'
       become: yes
       become_user: Administrator  
     - name: Reboot a machine that takes time to settle after being booted

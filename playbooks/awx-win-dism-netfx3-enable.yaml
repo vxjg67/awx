@@ -4,7 +4,7 @@
   tasks:
     - name: Enable dotNET3 via DISM - use Verbose 3
       ansible.windows.win_command:
-        cmd: '"C:\Windows\system32\dism.exe" "/online" "/enable-feature" "/featureName:NetFx3"'
+        cmd: '"C:\Windows\system32\dism.exe" "/online" "/enable-feature" "/featureName:NetFx3" "/quiet"'
       become: yes
       become_user: Administrator  
     - name: Reboot a machine that takes time to settle after being booted
