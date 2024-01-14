@@ -12,5 +12,5 @@
         - /get-features
         - /format:table
     - debug:
-        #msg: "{{ dism_features.stdout_lines|list|grep NetFx }}"
-        msg: "{{ dism_features.stdout_lines | list | regex_findall('^.NetFx$', multiline=True, ignorecase=True) }}"
+        msg: "{{ dism_features.stdout_lines|list }}"
+        #msg: "{{ dism_features.stdout_lines | list | regex_findall('^.NetFx$', multiline=True, ignorecase=True) }}"
