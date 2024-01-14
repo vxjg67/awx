@@ -13,4 +13,4 @@
         - /format:table
     - debug:
         #msg: "{{ dism_features.stdout_lines|list|grep NetFx }}"
-        msg: "{{ dism_features.stdout_lines | list | regex_findall('(?im)^.NetFx$') }}"
+        msg: "{{ dism_features.stdout_lines | list | regex_findall('^.NetFx$', multiline=True, ignorecase=True) }}"
